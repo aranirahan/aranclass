@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
-      <title>{{ site.name }} - {{ site.description }}</title>
+      <title>{{ site.name }} - {{ "My Class" }}</title>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta http-equiv="content-language" content="en-gb" />
@@ -31,17 +31,17 @@
       <nav>
         <h6>Follow me on</h6>
         <ul>
-          {% if site.twitter %}
-          <li><a target="_blank" href="https://twitter.com/{{ site.twitter }}">Twitter</a></li>
+          {% if site.dribbble %}
+          <li><a target="_blank" href="https://linkedin.com/in/{{ site.linkedin }}">Linkedin</a></li>
           {% endif %}
           {% if site.github %}
           <li><a target="_blank" href="https://github.com/{{ site.github }}">Github</a></li>
           {% endif %}
-          {% if site.dribbble %}
-          <li><a target="_blank" href="https://dribbble.com/{{ site.dribbble }}">Dribbble</a></li>
-          {% endif %}
           {% if site.instagram %}
-          <li><a target="_blank" href="https://instagram.com/{{ site.instagram }}">Instagram</a></li>
+          <li><a target="_blank" href="https://medium.com/{{ site.medium }}">Medium</a></li>
+          {% endif %}
+          {% if site.twitter %}
+          <li><a target="_blank" href="https://twitter.com/{{ site.twitter }}">Twitter</a></li>
           {% endif %}
         </ul>
       </nav>
@@ -53,6 +53,9 @@
       <header>
         <div class="h-wrap">
           <h1 class="title"><a href="{{ site.baseurl | split:'/' | join:'/' | append:'/'  }}" title="Back to Homepage">{{ site.name }}</a></h1>
+          <a title="{{ site.article }}" href="{{ "https://aranirahan.github.io" | append: "/" }}">{{ "Aran Irahan" }}</a>
+          &nbsp; &nbsp; || &nbsp; &nbsp;
+          <a title="{{ site.article }}" href="{{ "https://aranirahan.github.io/dailylearn" | append: "/" }}">{{ "Aran Class" }}</a>
           <a class="menu-icon" title="Open Bio"><span class="lines"></span></a>
         </div>
       </header>
