@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Kotlin 2 - Variable dan Property pada Kotlin"
-date:   2018-06-30 20:57:51
+date:   2018-07-01 20:57:51
 ---
 
 
