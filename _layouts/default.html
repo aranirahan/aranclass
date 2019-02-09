@@ -12,6 +12,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic" rel="stylesheet" type="text/css">
       <link rel="stylesheet" type="text/css" href="{{ site.baseurl| split: '/' | join:'/' }}/css/main.css" />
+      <link rel="icon" type="image/png" href="/javacup.png" sizes="32x32">
+      <link rel="icon" type="image/png" href="/javacup.png" sizes="16x16">
       <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Site ATOM Feed">
   </head>
 
@@ -22,7 +24,7 @@
 
     <div class="off-canvas">
       <figure class="avatar">
-        <img src="{{ site.baseurl }}/assets/img/avatar.jpg" alt="Picture" title="That's me, {{ site.author }}.">
+        <img src="{{ site.baseurl }}/assets/img/javacup.png" alt="Picture" title="That's me, {{ site.author }}.">
       </figure>
       <div class="bio">
           <h1>Hi, I'm {{ site.author }}.</h1>
@@ -52,10 +54,10 @@
 
       <header>
         <div class="h-wrap">
-          <h1 class="title"><a href="{{ site.baseurl | split:'/' | join:'/' | append:'/'  }}" title="Back to Homepage">{{ site.name }}</a></h1>
-          <a title="{{ site.article }}" href="{{ "https://aranirahan.github.io" | append: "/" }}">{{ "Aran Irahan" }}</a>
+          <!--<h1 class="title"><a href="{{ site.baseurl | split:'/' | join:'/' | append:'/'  }}" title="Back to Homepage">{{ site.name }}</a></h1>-->
+          <h1 class="title"><a title="{{ "aranirahan" }}" href="{{ "https://aranirahan.github.io" | append: "/" }}">{{ "Aran Irahan" }}</a></h1>
           &nbsp; &nbsp; || &nbsp; &nbsp;
-          <a title="{{ site.article }}" href="{{ "https://aranirahan.github.io/dailylearn" | append: "/" }}">{{ "Aran Class" }}</a>
+          <h1 class="title"><a title="{{ "aranclass" }}" href="{{ "https://aranirahan.github.io/dailylearn" | append: "/" }}">{{ "Aran Class" }}</a></h1>
           <a class="menu-icon" title="Open Bio"><span class="lines"></span></a>
         </div>
       </header>
