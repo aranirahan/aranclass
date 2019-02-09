@@ -18,7 +18,7 @@ Kotlin membuat semua tipe data tersebut bertindak sebagai objek. Berikut beberap
 ### Number
 Yang termasuk tipe data number: int, long, float, double, short, byte.
 
-{% highlight kt %}
+{% highlight js %}
 val intNomer = 7
 val longNomer = 2L
 val floatNomer = 4.5F
@@ -31,14 +31,14 @@ Konversi antar tipe data bisa menggunakan fungsi : toInt(), toDouble(), toFloat(
 
 Contoh konversi dari int ke double:
 
-{% highlight kt %}
+{% highlight js %}
 val intNomer = 7
 val doubleNomer = intNomer.toDouble()
 {% endhighlight %}
 
 Contoh konversi dari String ke int:
 
-{% highlight kt %}
+{% highlight js %}
 val stringNomer = "333"
 val intNomer = stringNomer.toInt()
 {% endhighlight %}
@@ -50,7 +50,7 @@ Boolean merupakan tipe data logika yang hanya bernilai true (benar) dan false (s
 
 Ada 3 jenis operasi dalam boolean, yaitu : disjunction (||), conjunction (&&), dan negation (!).
 
-{% highlight kt %}
+{% highlight js %}
 //contoh deklarasi pada boolean
 val booleanBenar = true
 val booleanSalah = false
@@ -67,7 +67,7 @@ val z = a < b || a > b //true
 ### String
 Kamu bisa menulis string untuk satu baris dengan tanda petik dua (“ ”). Sedangkan untuk lebih dari satu baris kamu bisa menggunakan triple petik dua (“““ ”””).
 
-{% highlight kt %}
+{% highlight js %}
 val stringSatuBaris = "Hello guys"
 val stringMultipleBaris = """ Hi, guys,
                 Love you all!"""
@@ -75,7 +75,7 @@ val stringMultipleBaris = """ Hi, guys,
 
 Atau kamu juga bisa gunakan karakter escape untuk membuat baris baru pada string.
 
-{% highlight kt %}
+{% highlight js %}
 val stringMultipleBaris = " Hi, guys, \n"+
       " Love you all!"
  
@@ -86,7 +86,7 @@ val stringMultipleBaris = " Hi, guys, \n Love you all!"
 String bisa diakses sebagai array dan bisa diiterasi. Contoh ketika kamu mau mengambil satu karakter di dalam sebuah string “Hi, you!”
 
 
-{% highlight kt %}
+{% highlight js %}
 val stringSatuBaris = "Hi, you"
 val iterasiString = stringSatuBaris[0]
 {% endhighlight %}
@@ -95,7 +95,7 @@ Maka value iterasiString adalah huruf pertama dari value stringSatuBaris, yaitu 
 
 Kamu juga bisa menambahkan variabel dan expressions ke dalam sebuah string.
 
-{% highlight kt %}
+{% highlight js %}
 val nomorKamar = 17
 val kataKasir = "Nomor kamar kamu adalah $nomorKamar"
 {% endhighlight %}
@@ -103,19 +103,19 @@ val kataKasir = "Nomor kamar kamu adalah $nomorKamar"
 ### Array
 Untuk array yang berisi satu macam tipe data kamu bisa membuat array dengan fungsi intArrayOf(), booleanArrayOf(), charArrayOf(), longArrayOf(), shortArrayOf(), byteArrayOf().
 
-{% highlight kt %}
+{% highlight js %}
 val contohIntArray = intArrayOf(1, 3, 5)
 {% endhighlight %}
 
 Untuk array yang berisi campuran tipe data kamu gunakan arrayOf().
 
-{% highlight kt %}
+{% highlight js %}
 val campuranArray = arrayOf(1, 7, 8.6, "kata", true)
 {% endhighlight %}
 
 Kamu juga bisa membuat array dengan konstraktor array itu sendiri
 
-{% highlight kt %}
+{% highlight js %}
 val nomerArray = Array(4, { i -> i * 2 })
 {% endhighlight %}
 
