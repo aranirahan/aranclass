@@ -8,7 +8,7 @@ description: "Lets learn every day until die"
 author: "Aran Irahan"
 
 url: "https://aranlearn.github.io"
-baseurl: "/aranlearn"
+baseurl: ""
 
 # A short presentation of yourself. Will show in the sidebar, under your name. Best usage would be between 30 to 50 words.
 author-bio: "I am a learner abadi"
