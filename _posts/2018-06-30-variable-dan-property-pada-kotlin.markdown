@@ -5,7 +5,7 @@ date:   2018-06-30 20:57:51
 ---
 
 
-# Tipe Data pada Kotlin
+# Variable dan Property pada Kotlin
 
 <img src="https://justynaniemiecki.pl/wp-content/uploads/2017/12/apple-1868496_1920.jpg">
 
