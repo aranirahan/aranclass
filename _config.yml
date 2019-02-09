@@ -7,7 +7,7 @@ description: "Lets learn every day until die"
 # Your name. Will show in your footer + sidebar
 author: "Aran Irahan"
 
-url: "https://aranlearn.github.io/"
+url: "aranlearn.github.io"
 baseurl: "/aranlearn"
 
 # A short presentation of yourself. Will show in the sidebar, under your name. Best usage would be between 30 to 50 words.
@@ -15,10 +15,10 @@ author-bio: "I am a learner abadi"
 
 # Social Accounts (mine, as placeholders)
 
-twitter: https://twitter.com/aranirahan
-github: https://github.com/aranirahan
-dribbble: https://dribbble.com/aranirahan
-instagram: https://www.instagram.com/aranirahan/
+twitter: aranirahan
+github: aranirahan
+dribbble: aranirahan
+instagram: aranirahan
 
 # Google Analytics (you may want to changes these with yours or even delete :)
 
