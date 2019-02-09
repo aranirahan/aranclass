@@ -4,61 +4,120 @@ title:  "Styling guide for Hikari: best practices"
 date:   2014-01-27 16:57:51
 ---
 
-But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.
 
->Good design is as little design as possible, said Dieter. Use quotations very carefully; especially if you don't understand them. 
+# Tipe Data pada Kotlin
 
-No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
+<img src="https://www.tag-cyber.com/images/uploads/blog_uploads/floppy.jpg">
 
-* Bullet points are so fancy
-* Easy to read, they make you look like a pro
-* Even when completely random 
+Kamu pasti sudah tahu kalau ada dua macam tipe data, yang pertama adalah tipe data primitif (int, boolean, long, char, dll) dan kedua adalah adalah tipe data reference (array, String, dll).
 
-In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided.
+Tipe data primitif adalah tipe data yang hanya menyimpan satu nilai pada setiap satu variabel. Sebaliknya tipe data reference dapat menyimpan banyak nilai.
 
-1. Ooh, and with numbers, it's even fancier
-2. It's like 1, 2, 3, did you see?
-3. Crazy stuff all around us; scary
+Kotlin membuat semua tipe data tersebut bertindak sebagai objek. Berikut beberapa basis tipe data yang harus kamu ketahui:
 
-There's nothing like a good block of code! Especially when picked randomly out of Github ([styledocco.js](https://github.com/jacobrask/styledocco/blob/master/styledocco.js)).  
+### Number
+Yang termasuk tipe data number: int, long, float, double, short, byte.
 
-{% highlight js %}
-var separate = function(css) {
-  var lines = css.split('\n');
-  var docs, code, line, blocks = [];
-  while (lines.length) {
-    docs = code = '';
-
-    while (lines.length && checkType(lines[0]) === 'single') {
-      docs += formatDocs(lines.shift());
-    }
-
-    if (lines.length && checkType(lines[0]) === 'multistart') {
-      while (lines.length) {
-        line = lines.shift();
-        docs += formatDocs(line);
-        if (checkType(line) === 'multiend') break;
-      }
-    }
-    while (lines.length && (checkType(lines[0]) === 'code' || checkType(lines[0]) === 'multiend')) {
-      code += formatCode(lines.shift());
-    }
-    blocks.push({ docs: docs, code: code });
-  }
-  return blocks;
-};
+{% highlight kt %}
+val intNomer = 7
+val longNomer = 2L
+val floatNomer = 4.5F
+val doubleNomer = 14.5
+val hexaNomer = 0x0F
+val byteNomer = 0b010101
 {% endhighlight %}
 
-<img src="{{ site.baseurl }}/assets/img/img2.jpg">
+Konversi antar tipe data bisa menggunakan fungsi : toInt(), toDouble(), toFloat(), toLong(), toShort(), toByte().
 
-# Heading 1
-Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.
+Contoh konversi dari int ke double:
 
-## Heading 2
-But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+{% highlight kt %}
+val intNomer = 7
+val doubleNomer = intNomer.toDouble()
+{% endhighlight %}
 
-### Heading 3
-In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided.
+Contoh konversi dari String ke int:
 
-#### Heading 4
-But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted.
+{% highlight kt %}
+val stringNomer = "333"
+val intNomer = stringNomer.toInt()
+{% endhighlight %}
+
+Maka value intNomer adalah 333.
+
+### Boolean
+Boolean merupakan tipe data logika yang hanya bernilai true (benar) dan false (salah). Tipe data ini memakai memori paling kecil.
+
+Ada 3 jenis operasi dalam boolean, yaitu : disjunction (||), conjunction (&&), dan negation (!).
+
+{% highlight kt %}
+//contoh deklarasi pada boolean
+val booleanBenar = true
+val booleanSalah = false
+ 
+//contoh operasi pada boolean
+val a = 2
+val b = 6
+val c = 4
+val x = a < b && b > c //true
+val y = a > b && a < c //false
+val z = a < b || a > b //true
+{% endhighlight %}
+
+### String
+Kamu bisa menulis string untuk satu baris dengan tanda petik dua (“ ”). Sedangkan untuk lebih dari satu baris kamu bisa menggunakan triple petik dua (“““ ”””).
+
+{% highlight kt %}
+val stringSatuBaris = "Hello guys"
+val stringMultipleBaris = """ Hi, guys,
+                Love you all!"""
+{% endhighlight %}
+
+Atau kamu juga bisa gunakan karakter escape untuk membuat baris baru pada string.
+
+{% highlight kt %}
+val stringMultipleBaris = " Hi, guys, \n"+
+      " Love you all!"
+ 
+//atau
+val stringMultipleBaris = " Hi, guys, \n Love you all!"
+{% endhighlight %}
+
+String bisa diakses sebagai array dan bisa diiterasi. Contoh ketika kamu mau mengambil satu karakter di dalam sebuah string “Hi, you!”
+
+
+{% highlight kt %}
+val stringSatuBaris = "Hi, you"
+val iterasiString = stringSatuBaris[0]
+{% endhighlight %}
+
+Maka value iterasiString adalah huruf pertama dari value stringSatuBaris, yaitu huruf H.
+
+Kamu juga bisa menambahkan variabel dan expressions ke dalam sebuah string.
+
+{% highlight kt %}
+val nomorKamar = 17
+val kataKasir = "Nomor kamar kamu adalah $nomorKamar"
+{% endhighlight %}
+
+### Array
+Untuk array yang berisi satu macam tipe data kamu bisa membuat array dengan fungsi intArrayOf(), booleanArrayOf(), charArrayOf(), longArrayOf(), shortArrayOf(), byteArrayOf().
+
+{% highlight kt %}
+val contohIntArray = intArrayOf(1, 3, 5)
+{% endhighlight %}
+
+Untuk array yang berisi campuran tipe data kamu gunakan arrayOf().
+
+{% highlight kt %}
+val campuranArray = arrayOf(1, 7, 8.6, "kata", true)
+{% endhighlight %}
+
+Kamu juga bisa membuat array dengan konstraktor array itu sendiri
+
+{% highlight kt %}
+val nomerArray = Array(4, { i -> i * 2 })
+{% endhighlight %}
+
+Konstruktor Array() membutuhkan size dan fungsi lambda. Angka 4 pada contoh diatas berperan sebagai size. Sehingga hasil kodenya adalah 4 buah angka dengan kelipatan 2 ([0,2,4,6]).
+
