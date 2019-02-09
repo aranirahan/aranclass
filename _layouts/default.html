@@ -31,8 +31,11 @@
           <p>{{ site.author-bio }}</p>
       </div>
       <nav>
-        <h6>Follow me on</h6>
+        <h6>Find my</h6>
         <ul>
+          {% if site.twitter %}
+          <li><a target="_blank" href="https://www.dropbox.com/sh/glw5qmo29zj6rfj/AACk_xjucicRP3mFlTWFMZFza?dl=0">Resume</a></li>
+          {% endif %}
           {% if site.linkedin %}
           <li><a target="_blank" href="https://linkedin.com/in/{{ site.linkedin }}">Linkedin</a></li>
           {% endif %}
@@ -44,9 +47,6 @@
           {% endif %}
           {% if site.twitter %}
           <li><a target="_blank" href="https://twitter.com/{{ site.twitter }}">Twitter</a></li>
-          {% endif %}
-          {% if site.twitter %}
-          <li><a target="_blank" href="https://www.dropbox.com/sh/glw5qmo29zj6rfj/AACk_xjucicRP3mFlTWFMZFza?dl=0">Resume</a></li>
           {% endif %}
         </ul>
       </nav>
