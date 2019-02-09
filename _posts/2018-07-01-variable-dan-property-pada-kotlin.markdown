@@ -18,7 +18,7 @@ Ada 2 macam pendefinisian variable pada kotlin, kamu bisa memakai `val` (immutab
 val nama : String = "Sudarmo"
 {% endhighlight %}
 
-{% highlight %}
+{% highlight js %}
 val => Jenis immutable
 nama => Nama varible
 String => Tipe data
@@ -56,7 +56,7 @@ class Motor {
 }
 {% endhighlight %}
 
-{% highlight %}
+{% highlight js %}
 Dalam class motor terdapat satu property dengan nama namaMotor dan dengan tipe data String
 {% endhighlight %}
 
