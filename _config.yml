@@ -1,5 +1,5 @@
 # Title of your blog; shows in the header
-name: "aran"
+name: "Aran Irahan"
 
 # Description of your content (will only be used on Google Search)
 description: "Lets learn every day until die"
@@ -11,14 +11,14 @@ url: "https://aranlearn.github.io"
 baseurl: "/dailylearn"
 
 # A short presentation of yourself. Will show in the sidebar, under your name. Best usage would be between 30 to 50 words.
-author-bio: "I am a learner abadi"
+author-bio: "Lets learn every day until die"
 
 # Social Accounts (mine, as placeholders)
 
-twitter: aranirahan
+linkedin: aranirahan
 github: aranirahan
-dribbble: aranirahan
-instagram: aranirahan
+medium: @aranirahan
+twitter: aranirahan
 
 # Google Analytics (you may want to changes these with yours or even delete :)
 
